@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player : MonoBehaviour {
 	public Text waveScore,score,highScore,coins;
-	private float speed = 10f;
+	private float speed = 25f;
 	public float mapWidth = 3.2f;
 	private Rigidbody2D rb;
 	private float a,b;
@@ -40,14 +40,14 @@ public class Player : MonoBehaviour {
 	void FixedUpdate(){
 		//PLAYER MOVEMENT
 
-
+		/*
 		if (Input.touchCount > 0) {
 			a = Input.GetTouch (0).deltaPosition.x;
 			//a = Mathf.Clamp (a, -1f, 1f);
 		} else
-			a = 0f;
+			a = 0f;*/
 
-		float x = /*Input.GetAxis ("Horizontal")*/a * Time.fixedDeltaTime / speed;
+		float x = Input.GetAxis ("Horizontal")/*a*/ * Time.fixedDeltaTime * speed;
 		Vector2 newPosition = rb.position + Vector2.right * x;
 		newPosition.x = Mathf.Clamp (newPosition.x, -mapWidth, mapWidth);
 		rb.MovePosition (newPosition);
