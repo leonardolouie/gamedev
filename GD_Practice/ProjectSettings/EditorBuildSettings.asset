@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DodgeBlockGame/Scenes/MainLevel.unity
     guid: 0c4219efa8334ed4c8c440085673f8d6
+  - enabled: 1
+    path: Assets/DodgeBlockGame/Scenes/vrScene.unity
+    guid: 167485a2bfc4f404eb59e01bd3339630
